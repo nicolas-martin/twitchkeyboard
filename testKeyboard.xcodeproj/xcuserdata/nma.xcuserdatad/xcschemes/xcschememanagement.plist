@@ -9,13 +9,23 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>testTwitchKeyboard.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>8C7557EB1D7E359C00EBA917</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
+		</dict>
+		<key>8C7558041D7E35D900EBA917</key>
+		<dict>
+			<key>primary</key>
+			<true />
 		</dict>
 	</dict>
 </dict>

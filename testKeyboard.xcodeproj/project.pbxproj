@@ -12,9 +12,39 @@
 		8C7557F51D7E359C00EBA917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7557F31D7E359C00EBA917 /* Main.storyboard */; };
 		8C7557F71D7E359C00EBA917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7557F61D7E359C00EBA917 /* Assets.xcassets */; };
 		8C7557FA1D7E359C00EBA917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7557F81D7E359C00EBA917 /* LaunchScreen.storyboard */; };
+		8C7558081D7E35DA00EBA917 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7558071D7E35DA00EBA917 /* KeyboardViewController.swift */; };
+		8C75580C1D7E35DA00EBA917 /* testTwitchKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8C7558051D7E35D900EBA917 /* testTwitchKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9CB41AF966B35B916BDF3397 /* Pods_testTwitchKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B8F3C1B030926A43C2E6B1 /* Pods_testTwitchKeyboard.framework */; };
+		CFC5AF8D6B85D9B53F580EA5 /* Pods_testKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB904AF1F29C91D4860FA511 /* Pods_testKeyboard.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8C75580A1D7E35DA00EBA917 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C7557E41D7E359C00EBA917 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C7558041D7E35D900EBA917;
+			remoteInfo = testTwitchKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C7558101D7E35DA00EBA917 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8C75580C1D7E35DA00EBA917 /* testTwitchKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2A17085E3291CA0D6DF5CFD0 /* Pods-testTwitchKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTwitchKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-testTwitchKeyboard/Pods-testTwitchKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		37B8F3C1B030926A43C2E6B1 /* Pods_testTwitchKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testTwitchKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7557EC1D7E359C00EBA917 /* testKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7557EF1D7E359C00EBA917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C7557F11D7E359C00EBA917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +52,13 @@
 		8C7557F61D7E359C00EBA917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C7557F91D7E359C00EBA917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C7557FB1D7E359C00EBA917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C7558051D7E35D900EBA917 /* testTwitchKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = testTwitchKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C7558071D7E35DA00EBA917 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		8C7558091D7E35DA00EBA917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C60D46790B75AAED4CC12551 /* Pods-testKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-testKeyboard/Pods-testKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		D6C82046B04FF2E7439A2230 /* Pods-testTwitchKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTwitchKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testTwitchKeyboard/Pods-testTwitchKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		DB904AF1F29C91D4860FA511 /* Pods_testKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFFD485184C970DF706BC067 /* Pods-testKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testKeyboard/Pods-testKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +66,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC5AF8D6B85D9B53F580EA5 /* Pods_testKeyboard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C7558021D7E35D900EBA917 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CB41AF966B35B916BDF3397 /* Pods_testTwitchKeyboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30C92515E3FD2CE25FC31844 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB904AF1F29C91D4860FA511 /* Pods_testKeyboard.framework */,
+				37B8F3C1B030926A43C2E6B1 /* Pods_testTwitchKeyboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8C7557E31D7E359B00EBA917 = {
 			isa = PBXGroup;
 			children = (
 				8C7557EE1D7E359C00EBA917 /* testKeyboard */,
+				8C7558061D7E35DA00EBA917 /* testTwitchKeyboard */,
 				8C7557ED1D7E359C00EBA917 /* Products */,
+				8E273ACBC22C7B9DB03CC460 /* Pods */,
+				30C92515E3FD2CE25FC31844 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				8C7557EC1D7E359C00EBA917 /* testKeyboard.app */,
+				8C7558051D7E35D900EBA917 /* testTwitchKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +123,26 @@
 			path = testKeyboard;
 			sourceTree = "<group>";
 		};
+		8C7558061D7E35DA00EBA917 /* testTwitchKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C7558071D7E35DA00EBA917 /* KeyboardViewController.swift */,
+				8C7558091D7E35DA00EBA917 /* Info.plist */,
+			);
+			path = testTwitchKeyboard;
+			sourceTree = "<group>";
+		};
+		8E273ACBC22C7B9DB03CC460 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFFD485184C970DF706BC067 /* Pods-testKeyboard.debug.xcconfig */,
+				C60D46790B75AAED4CC12551 /* Pods-testKeyboard.release.xcconfig */,
+				D6C82046B04FF2E7439A2230 /* Pods-testTwitchKeyboard.debug.xcconfig */,
+				2A17085E3291CA0D6DF5CFD0 /* Pods-testTwitchKeyboard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,18 +150,43 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C7557FE1D7E359C00EBA917 /* Build configuration list for PBXNativeTarget "testKeyboard" */;
 			buildPhases = (
+				388D8A42FA82F49D8317B803 /* [CP] Check Pods Manifest.lock */,
 				8C7557E81D7E359C00EBA917 /* Sources */,
 				8C7557E91D7E359C00EBA917 /* Frameworks */,
 				8C7557EA1D7E359C00EBA917 /* Resources */,
+				8C7558101D7E35DA00EBA917 /* Embed App Extensions */,
+				2E5A4949383CED4EA6871097 /* [CP] Embed Pods Frameworks */,
+				18A89EE3DB14AE018FA181A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8C75580B1D7E35DA00EBA917 /* PBXTargetDependency */,
 			);
 			name = testKeyboard;
 			productName = testKeyboard;
 			productReference = 8C7557EC1D7E359C00EBA917 /* testKeyboard.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8C7558041D7E35D900EBA917 /* testTwitchKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C75580D1D7E35DA00EBA917 /* Build configuration list for PBXNativeTarget "testTwitchKeyboard" */;
+			buildPhases = (
+				C80B0982BCADA8DB5293EF8A /* [CP] Check Pods Manifest.lock */,
+				8C7558011D7E35D900EBA917 /* Sources */,
+				8C7558021D7E35D900EBA917 /* Frameworks */,
+				8C7558031D7E35D900EBA917 /* Resources */,
+				DC3077610123988C897386BB /* [CP] Embed Pods Frameworks */,
+				6DC9FD446AACA2FC1F888944 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testTwitchKeyboard;
+			productName = testTwitchKeyboard;
+			productReference = 8C7558051D7E35D900EBA917 /* testTwitchKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +199,9 @@
 				ORGANIZATIONNAME = "Nicolas Martin";
 				TargetAttributes = {
 					8C7557EB1D7E359C00EBA917 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					8C7558041D7E35D900EBA917 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -113,6 +220,7 @@
 			projectRoot = "";
 			targets = (
 				8C7557EB1D7E359C00EBA917 /* testKeyboard */,
+				8C7558041D7E35D900EBA917 /* testTwitchKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +236,107 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C7558031D7E35D900EBA917 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18A89EE3DB14AE018FA181A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testKeyboard/Pods-testKeyboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E5A4949383CED4EA6871097 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testKeyboard/Pods-testKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		388D8A42FA82F49D8317B803 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6DC9FD446AACA2FC1F888944 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testTwitchKeyboard/Pods-testTwitchKeyboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C80B0982BCADA8DB5293EF8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC3077610123988C897386BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testTwitchKeyboard/Pods-testTwitchKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C7557E81D7E359C00EBA917 /* Sources */ = {
@@ -140,7 +348,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C7558011D7E35D900EBA917 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C7558081D7E35DA00EBA917 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C75580B1D7E35DA00EBA917 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C7558041D7E35D900EBA917 /* testTwitchKeyboard */;
+			targetProxy = 8C75580A1D7E35DA00EBA917 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8C7557F31D7E359C00EBA917 /* Main.storyboard */ = {
@@ -247,8 +471,10 @@
 		};
 		8C7557FF1D7E359C00EBA917 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFFD485184C970DF706BC067 /* Pods-testKeyboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = testKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hero.testKeyboard;
@@ -258,12 +484,38 @@
 		};
 		8C7558001D7E359C00EBA917 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C60D46790B75AAED4CC12551 /* Pods-testKeyboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = testKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hero.testKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8C75580E1D7E35DA00EBA917 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6C82046B04FF2E7439A2230 /* Pods-testTwitchKeyboard.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = testTwitchKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.testKeyboard.testTwitchKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8C75580F1D7E35DA00EBA917 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A17085E3291CA0D6DF5CFD0 /* Pods-testTwitchKeyboard.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = testTwitchKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.testKeyboard.testTwitchKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -286,6 +538,16 @@
 				8C7558001D7E359C00EBA917 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C75580D1D7E35DA00EBA917 /* Build configuration list for PBXNativeTarget "testTwitchKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C75580E1D7E35DA00EBA917 /* Debug */,
+				8C75580F1D7E35DA00EBA917 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

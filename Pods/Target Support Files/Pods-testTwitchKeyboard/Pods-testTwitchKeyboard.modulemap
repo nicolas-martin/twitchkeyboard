@@ -1,0 +1,6 @@
+framework module Pods_testTwitchKeyboard {
+  umbrella header "Pods-testTwitchKeyboard-umbrella.h"
+
+  export *
+  module * { export * }
+}
