@@ -77,37 +77,38 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let NbRows = 4
         
-        let buttonTitles1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
-        let buttonTitles2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
-        let buttonTitles3 = ["CP", "Z", "X", "C", "V", "B", "N", "M", "BP"]
-        let buttonTitles4 = ["CHG", "SPACE", "RETURN"]
+        let buttonTitles1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L"]
         
-        let row1 = createRowOfButtons(buttonTitles1)
-        let row2 = createRowOfButtons(buttonTitles2)
-        let row3 = createRowOfButtons(buttonTitles3)
-        let row4 = createRowOfButtons(buttonTitles4)
+        let nbItemsFullRow = Int(ceil(Float(buttonTitles1.count) / Float(NbRows)))
+        let leftOver = buttonTitles1.count - (nbItemsFullRow * (NbRows - 1))
         
-        self.view.addSubview(row1)
-        self.view.addSubview(row2)
-        self.view.addSubview(row3)
-        self.view.addSubview(row4)
+        var rowViews = [UIView]()
         
-        addConstraintsToInputView(self.view, rowViews: [row1, row2, row3, row4])
+        for i in 0.stride(through: NbRows, by: 1){
+            var subSet = [String]()
+            if i < NbRows - 1 {
+                for j in 0.stride(to: nbItemsFullRow, by: 1) {
+                    subSet.append(buttonTitles1[j + (i * nbItemsFullRow)])
+
+                }
+            }else{
+                for j in 0.stride(to: leftOver, by: 1) {
+                    subSet.append(buttonTitles1[j + ((i - 1) * nbItemsFullRow)])
+                }
+                
+            }
+            
+            let row = createRowOfButtons(subSet)
+            self.view.addSubview(row)
+            
+            rowViews.append(row)
+
+        }
         
-        //        // Perform custom UI setup here
-        //        self.nextKeyboardButton = UIButton(type: .System)
-        //
-        //        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
-        //        self.nextKeyboardButton.sizeToFit()
-        //        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        //
-        //        self.nextKeyboardButton.addTarget(self, action: #selector(advanceToNextInputMode), forControlEvents: .TouchUpInside)
-        //
-        //        self.view.addSubview(self.nextKeyboardButton)
-        //
-        //        self.nextKeyboardButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
-        //        self.nextKeyboardButton.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
+        addConstraintsToInputView(self.view, rowViews:rowViews)
+        
     }
     
     func addConstraintsToInputView(inputView: UIView, rowViews: [UIView]){
