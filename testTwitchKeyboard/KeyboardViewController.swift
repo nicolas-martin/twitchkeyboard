@@ -29,7 +29,7 @@ class KeyboardViewController: UIInputViewController {
         button.titleLabel!.font = UIFont.systemFontOfSize(15)
         button.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
-//        button.af_setImageForState(.Normal, URL: NSURL(fileURLWithPath: "https://static-cdn.jtvnw.net/emoticons/v1/78426/3.0"))
+        //        button.af_setImageForState(.Normal, URL: NSURL(fileURLWithPath: "https://static-cdn.jtvnw.net/emoticons/v1/78426/3.0"))
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(KeyboardViewController.didTapButton(_:)), forControlEvents: .TouchUpInside)
         
@@ -39,10 +39,23 @@ class KeyboardViewController: UIInputViewController {
     func didTapButton(sender: AnyObject?) {
         
         let button = sender as! UIButton
-        let title = button.titleForState(.Normal)
+        let title = button.titleForState(.Normal)!
         let proxy = textDocumentProxy as UITextDocumentProxy
         
-        proxy.insertText(title!)
+        proxy.insertText(title)
+        
+        switch title {
+        case "BP" :
+            proxy.deleteBackward()
+        case "RETURN" :
+            proxy.insertText("\n")
+        case "SPACE" :
+            proxy.insertText(" ")
+        case "CHG" :
+            self.advanceToNextInputMode()
+        default :
+            proxy.insertText(title)
+        }
     }
     
     func createRowOfButtons(buttonTitles: [NSString]) -> UIView {
@@ -59,7 +72,7 @@ class KeyboardViewController: UIInputViewController {
         
         keyboardRowView.translatesAutoresizingMaskIntoConstraints = false
         return keyboardRowView
-
+        
     }
     
     override func viewDidLoad() {
@@ -82,19 +95,19 @@ class KeyboardViewController: UIInputViewController {
         
         addConstraintsToInputView(self.view, rowViews: [row1, row2, row3, row4])
         
-//        // Perform custom UI setup here
-//        self.nextKeyboardButton = UIButton(type: .System)
-//        
-//        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
-//        self.nextKeyboardButton.sizeToFit()
-//        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        self.nextKeyboardButton.addTarget(self, action: #selector(advanceToNextInputMode), forControlEvents: .TouchUpInside)
-//        
-//        self.view.addSubview(self.nextKeyboardButton)
-//        
-//        self.nextKeyboardButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
-//        self.nextKeyboardButton.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
+        //        // Perform custom UI setup here
+        //        self.nextKeyboardButton = UIButton(type: .System)
+        //
+        //        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
+        //        self.nextKeyboardButton.sizeToFit()
+        //        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
+        //
+        //        self.nextKeyboardButton.addTarget(self, action: #selector(advanceToNextInputMode), forControlEvents: .TouchUpInside)
+        //
+        //        self.view.addSubview(self.nextKeyboardButton)
+        //
+        //        self.nextKeyboardButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
+        //        self.nextKeyboardButton.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
     }
     
     func addConstraintsToInputView(inputView: UIView, rowViews: [UIView]){
@@ -181,17 +194,17 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
-//    override func textDidChange(textInput: UITextInput?) {
-//        // The app has just changed the document's contents, the document context has been updated.
-//        
-//        var textColor: UIColor
-//        let proxy = self.textDocumentProxy
-//        if proxy.keyboardAppearance == UIKeyboardAppearance.Dark {
-//            textColor = UIColor.whiteColor()
-//        } else {
-//            textColor = UIColor.blackColor()
-//        }
-//        self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
-//    }
+    //    override func textDidChange(textInput: UITextInput?) {
+    //        // The app has just changed the document's contents, the document context has been updated.
+    //
+    //        var textColor: UIColor
+    //        let proxy = self.textDocumentProxy
+    //        if proxy.keyboardAppearance == UIKeyboardAppearance.Dark {
+    //            textColor = UIColor.whiteColor()
+    //        } else {
+    //            textColor = UIColor.blackColor()
+    //        }
+    //        self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
+    //    }
     
 }
